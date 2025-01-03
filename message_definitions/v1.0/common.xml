@@ -3590,6 +3590,9 @@
       <entry value="2" name="PARACHUTE_RELEASE">
         <description>Release parachute and kill motors.</description>
       </entry>
+      <entry value="3" name="PARACHUTE_GRADUAL_RELEASE">
+        <description>Gradually release parachute.</description>
+      </entry>
     </enum>
     <!-- TUNNEL related enums, used by STorM32 gimbal-->
     <enum name="MAV_TUNNEL_PAYLOAD_TYPE">
