@@ -993,7 +993,17 @@
         <param index="6" label="Longitude">Longitude</param>
         <param index="7" label="Altitude" units="m">Altitude</param>
       </entry>
-      <entry value="95" name="MAV_CMD_NAV_LAST" hasLocation="false" isDestination="false">
+      <entry value="95" name="MAV_CMD_NAV_LOITER_SMOKE" hasLocation="true" isDestination="true">
+        <description>Loiter and smoke tille smoke is depleted or manually set as complete.</description>
+        <param index="1">Empty</param>
+        <param index="2">Empty</param>
+        <param index="3" label="Radius" units="m">Radius around waypoint. If positive loiter clockwise, else counter-clockwise.</param>
+        <param index="4">Forward moving aircraft this sets exit xtrack location: 0 for center of loiter wp, 1 for exit location. Else, this is desired yaw angle.  NaN to use the current system yaw heading mode (e.g. yaw towards next waypoint, yaw to home, etc.).</param>
+        <param index="5" label="Latitude">Latitude</param>
+        <param index="6" label="Longitude">Longitude</param>
+        <param index="7" label="Altitude" units="m">Altitude</param>
+      </entry>
+      <entry value="96" name="MAV_CMD_NAV_LAST" hasLocation="false" isDestination="false">
         <description>NOP - This command is only used to mark the upper limit of the NAV/ACTION commands in the enumeration</description>
         <param index="1">Empty</param>
         <param index="2">Empty</param>

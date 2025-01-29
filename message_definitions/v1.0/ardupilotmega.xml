@@ -67,6 +67,28 @@
         <param index="6">Empty.</param>
         <param index="7">Empty.</param>
       </entry>
+      <entry value="41997" name="MAV_CMD_DO_SMOKE_PUMP_CONTROL" hasLocation="false" isDestination="false">
+        <description>Control smoke pump for smoke system.</description>
+        <param index="1" label="StartSmokePump" minValue="0" maxValue="1" increment="1">1: start smoke pump. 0: stop smoke pump.</param>
+        <param index="2" label="Complete" minValue="0" maxValue="1" increment="1">1: manually complete pump operation for mission continuation.</param>
+        <param index="3">Empty</param>
+        <param index="4">Empty</param>
+        <param index="5">Empty</param>
+        <param index="5">Empty</param>
+        <param index="6">Empty</param>
+        <param index="7">Empty</param>
+      </entry>
+      <entry value="41999" name="MAV_CMD_DO_PITCH_UP" hasLocation="false" isDestination="false">
+        <description>Force a pitch up at a certain min pitch angle for a minimum duration</description>
+        <param index="1" label="ForcePitchUp" minValue="0" maxValue="90" units="deg">Pitch up angle in degrees</param>
+        <param index="2">Empty</param>
+        <param index="3">Empty</param>
+        <param index="4">Empty</param>
+        <param index="5">Empty</param>
+        <param index="5">Empty</param>
+        <param index="6">Empty</param>
+        <param index="7">Empty</param>
+      </entry>
       <entry value="83" name="MAV_CMD_NAV_ALTITUDE_WAIT" hasLocation="false" isDestination="false">
         <description>Mission command to wait for an altitude or downwards vertical speed. This is meant for high altitude balloon launches, allowing the aircraft to be idle until either an altitude is reached or a negative vertical speed is reached (indicating early balloon burst). The wiggle time is how often to wiggle the control surfaces to prevent them seizing up.</description>
         <param index="1" label="Altitude" units="m">Altitude.</param>
@@ -1512,6 +1534,12 @@
       <field type="uint8_t" name="pattern">Pattern (see LED_PATTERN_ENUM).</field>
       <field type="uint8_t" name="custom_len">Custom Byte Length.</field>
       <field type="uint8_t[24]" name="custom_bytes">Custom Bytes.</field>
+    </message>
+    <message id="187" name="PUMP">
+    <!-- IS THE PUMP PUMPING AND IS IT COMPLETE -->
+      <description>Smokepump status reporting.</description>
+      <field type="uint8_t" name="pump_on">Is the pump pumping.</field>
+      <field type="uint8_t" name="pump_out">Is the pump out of smoke fluid.</field>
     </message>
     <message id="191" name="MAG_CAL_PROGRESS">
       <description>Reports progress of compass calibration.</description>
